@@ -12,7 +12,7 @@ cp -r skel tunombre.tuapellido
 cd tunombre.tuapellido
 ```
 
-La carpeta scad es para ficheros de OpenScad, la carpeta arduino para proyectos de arduino
+La carpeta `scad` es para ficheros de OpenScad, la carpeta `arduino` para proyectos de arduino
 
 # Subir cambios
 
