@@ -19,10 +19,11 @@ La carpeta `scad` es para ficheros de OpenScad, **sin subcarpetas**, la carpeta 
 ```
 # Mirar si otra persona ha hecho cambios
 git pull
-# Añadir cambios propios
-git commit -am "Mensaje"
+# Añadir cambios a git
+git add <archivo o carpeta>
+git commit -m "Mensaje"
 # Subir cambios
-git push
+git push -u origin master
 ```
 
 # Tutoriales y referencias externas
