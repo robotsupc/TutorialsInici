@@ -1,0 +1,10 @@
+# For OpenScad files
+*.stl
+
+# For C++
+*.out
+*.bin
+*.o
+*.exe
+*.a
+*.so
