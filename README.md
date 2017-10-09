@@ -2,7 +2,7 @@
 Carpeta que contiene el progreso de aprendizaje de los miembros
 
 
-# Nuevo miembro:
+# Nuevo miembro
 
 ```
 # Clona el repo y crea tu carpeta
@@ -12,7 +12,7 @@ cp -r skel tunombre.tuapellido
 cd tunombre.tuapellido
 ```
 
-La carpeta `scad` es para ficheros de OpenScad, la carpeta `arduino` para proyectos de arduino
+La carpeta `scad` es para ficheros de OpenScad, **sin subcarpetas**, la carpeta `arduino` para proyectos de arduino, **un proyecto de PlatformIO por carpeta**
 
 # Subir cambios
 
