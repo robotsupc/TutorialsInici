@@ -2,7 +2,7 @@
 Carpeta que contiene el progreso de aprendizaje de los miembros
 
 
-# Nuevo miembro:
+# Nuevo miembro
 
 ```
 # Clona el repo y crea tu carpeta
