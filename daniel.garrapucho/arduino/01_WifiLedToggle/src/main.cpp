@@ -2,8 +2,11 @@
 #include <ESP8266WiFi.h>
 #include <ESP8266WebServer.h>
 
-const char* ssid = "AndroidAP";
-const char* password = "lumierelumiere";
+//Per testejar correctament el programa, crea una xarxa mobil amb el teu smartphone
+// i utilitza les seves credencials aqui abaix. Per evitar errors, accedeix a la direccio
+// IP assignada desde un altre mobil en comptes d'un ordinador.
+const char* ssid = "ssid";
+const char* password = "XXXXX";
 
 ESP8266WebServer server(80);
 bool led = false;
