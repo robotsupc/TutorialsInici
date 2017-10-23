@@ -3,6 +3,7 @@ llarg=100;
 ample=70;
 f_tornillo=1;
 radi=5;  //cantonada
+es_forats=10;
 
 module cantonada(){
     linear_extrude(altura){
@@ -27,7 +28,7 @@ module part_1(){
         translate([0,(llarg/2)-radi,0])
         cylinder(r=f_tornillo,h=altura,$fn=20);
         
-        for(i=[0:10:(llarg/2)-2*radi-f_tornillo]){
+        for(i=[0:es_forats:(llarg/2)-2*radi-f_tornillo]){
             translate([0,i,0])
             cylinder(r=f_tornillo,h=altura,$fn=20);
             translate([0,-i,0])
