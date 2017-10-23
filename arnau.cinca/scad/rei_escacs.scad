@@ -307,6 +307,128 @@ module torre3d(){
     
 }
 
+
+
+module coscavall3d(){
+
+    rotate_extrude(){
+        difference(){
+            translate([0,1.5])
+            base2d();
+            square(21);
+        }
+        
+    }
+    translate([0,-1,5])
+    scale([.1,.15,.2]){
+    translate([0,4.5,-5])
+    rotate_extrude(){
+        difference(){
+    square([20,5]);
+            translate([20,2.5])
+            circle(2.5,$fn=20);
+        }
+    }
+    for(i=[-5:5]){
+       
+        hull(){
+             translate([0,i*i/5,5*(i+5)])
+            cylinder(r=20-(i+5),h=1);
+            translate([0,(i+1)*(i+1)/5,5*(i+6)])
+             cylinder(r=20-(i+6),h=1); 
+        
+            }
+        }
+    }
+    
+
+
+}
+
+module capcavall(){
+    difference(){
+        hull(){
+            difference(){
+                scale([0.1,0.15,0.2])
+                sphere(20,$fn=20);
+                translate([-20,-20,-40.5])
+                cube(40);
+            }
+            translate([.9,2,2.5])
+            sphere(.4,$fn=20);
+            translate([-.9,2,2.5])
+            sphere(.4,$fn=20);
+            translate([0,5,1])
+            scale([0.17,.15,0.17])
+            sphere(7,$fn=20);
+        }
+        translate([-5,4.5,.4])
+        rotate([-10,0,0])
+        minkowski(){
+            cube([10,10,.05]);
+            sphere(.1,$fn=20);
+        }
+                
+        translate([.6,5,1.5])
+        rotate([-70,0,0])
+        minkowski(){
+            cylinder(r=.05,h=1,$fn=20);
+            sphere(.1,$fn=20);
+        } 
+        translate([-.6,5,1.5])
+        rotate([-70,0,0])
+        minkowski(){
+            cylinder(r=.05,h=1,$fn=20);
+            sphere(.1,$fn=20);
+        }   
+    }
+    
+    translate([.8,0,2.4])
+    rotate([-10,15,0])
+    scale([.1,.1,.05])
+    orella();
+    translate([-.8,0,2.4])
+    rotate([-10,-15,0])
+    scale([.1,.1,.05])
+    orella();
+}
+
+module orella(){
+    
+        for(i=[-5:5]){
+       
+        hull(){
+             translate([0,i*i/5,5*(i+5)])
+            rotate([0,0,30])
+            cylinder(r=9-(i+5),h=1,$fn=3);
+            translate([0,(i+1)*(i+1)/5,5*(i+6)])
+            rotate([0,0,30])
+             cylinder(r=9-(i+6),h=1,$fn=3); 
+        
+            }
+            
+        }
+        
+    
+}
+    module cavall(){
+        coscavall3d();
+        translate([0,0,16])
+        rotate([-10,0,0])
+        scale(.75)
+        difference(){
+            
+        capcavall();
+            translate([1.2,1.9,2.5])
+            sphere(.4,$fn=20);
+            translate([-1.2,1.9,2.5])
+            sphere(.4,$fn=20);
+        
+    }
+}
+translate([60,0,0])
+cavall();
+
 translate([40,0,0])
 torre3d();
 
