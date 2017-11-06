@@ -1,5 +1,5 @@
 #include "control.h"
-#include <Arduino.h>
+#include <Arduino.h> //només és per fer el serial print
 
 int control::vel(char doe){
   if (doe == 'D' or doe == 'd') return motD.vel;
