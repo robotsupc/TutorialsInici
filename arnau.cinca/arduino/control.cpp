@@ -1,17 +1,21 @@
 #include "control.h"
-#include <Arduino.h> //només és per fer el serial print
+#include <Arduino.h>
 
-int control::vel(char doe){
-  if (doe == 'D' or doe == 'd') return motD.vel;
-  else if (doe == 'E' or doe == 'e') return motE.vel;
-  else Serial.println("Motor incorrecte");
+int control::velD(){
+  return motD.vel;
+}
+int control::velE(){
+  return motE.vel;
 }
 
-bool control::dir(char doe){
-  if (doe == 'D' or doe == 'd') return motD.flag;
-  else if (doe == 'E' or doe == 'e') return motE.flag;
-  else Serial.println("Motor incorrecte");
+bool control::dirD(){
+  return motD.flag;
 }
+bool control::dirE(){
+  return motE.flag;
+}
+
+
 void control::avanca(int x, int y){
 
   if(y>0){
