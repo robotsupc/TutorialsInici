@@ -13,9 +13,11 @@ motor motE;
 
 public:
 
-int vel(char doe); //consultar velocitat del motor d o e
+int velD(); //consultar velocitat del motor dret
+int velE(); //consultar velocitat del motor esquerra
 
-bool dir(char doe); //consulatar direcció del motor d o e
+bool dirD(); //consulatar direcció del motor dret
+bool dirE(); //consulatar direcció del motor esquerra
 
 void avanca(int x, int y); // calculs de direcció i velocitat
 
