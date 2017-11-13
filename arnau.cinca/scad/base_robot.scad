@@ -10,6 +10,7 @@ module cantonada (){
 }
 
 module part1(){
+    difference(){
     linear_extrude(z){
             difference(){
             hull(){
@@ -23,17 +24,31 @@ module part1(){
                 circle(f_tornillo);
                 translate([0,-y+radi])
                 circle(f_tornillo);
-            for(i=[0:5:y-radi]){
+            for(i=[0:5:y-2*radi-1]){
                 translate([0,i])
                 circle(f_tornillo);
                 translate([0,-i])
                 circle(f_tornillo);
                 }
+                
         }
     } 
+    translate([-radi,y-2*radi,0])
+    cube([2*radi,2*radi,z/3]);
+    
+    translate([-radi,y-2*radi,2*z/3])
+    cube([2*radi,2*radi,z/3]);
+    
+    translate([-radi,-y,0])
+    cube([2*radi,2*radi,z/3]);
+    
+    translate([-radi,-y,2*z/3])
+    cube([2*radi,2*radi,z/3]);
+    }
 }
 
 module part2(){
+    difference(){
     linear_extrude(z){
         difference(){
         hull(){
@@ -51,9 +66,14 @@ module part2(){
     }
     } 
     
+    translate([x-2*radi,-radi,z/3])
+    cube([2*radi,2*radi,z/3]);
+  translate([-x,-radi,z/3])
+    cube([2*radi,2*radi,z/3]);
+
+
     
-    
-    
+}
     }
     
     
