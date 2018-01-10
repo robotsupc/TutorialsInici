@@ -33,14 +33,14 @@ Curs impresió 3D
     -!
   -for
 
-  -Practica
+  -Practica(Peça escacs)
 
 -Dia 3:
-  -Peça escacs
   -Introducció cura
+  -Introducció hardware impresora 3D (imprimir cub p.e.)
   
 -Dia 4:
-  -Introducció hardware impresora 3D (imprimir cub p.e.)
+  
   -Ininci practica final
   
 -Dia 5:
